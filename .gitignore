@@ -1,0 +1,7 @@
+# --- Fitxers compilats ---
+*.class
+
+# --- Carpetes de compilació de Maven ---
+target/
+
+doc/
