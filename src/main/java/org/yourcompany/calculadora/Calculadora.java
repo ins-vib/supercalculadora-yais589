@@ -6,6 +6,7 @@ package org.yourcompany.calculadora;
  *
  * @author Posa el teu nom
  */
+import java.util.Random;
 
 
 public class Calculadora {
@@ -17,6 +18,23 @@ public class Calculadora {
         System.out.println("Nombre de dígits de 56789: " + nombreDigits(56789));
         System.out.println("Nombre de dígits de -101010: " + nombreDigits(-101010));
         System.out.println("Nombre de dígits de 0: " + nombreDigits(0));
+
+        int c = moneda(50);
+        System.out.println("Número cares " + c);
+        System.out.println("Número creus " + (50- c));
+
+        int a = moneda(100);
+        System.out.println("Número cares " + a);
+        System.out.println("Número creus " + (100- a));
+
+         int b = moneda(10000);
+        System.out.println("Número cares " + b);
+        System.out.println("Número creus " + (10000- b));
+ 
+        System.out.println("la entrada cuesta :" + cinema(15, true, true) );
+        System.out.println("la entrada cuesta :" + cinema(15, false, true) );
+        System.out.println("la entrada cuesta :" + cinema(15, true, false) );
+        System.out.println("la entrada cuesta :" + cinema(15, false, false) );
 
         // Exemples de crida per al mètode sumaPrimersNumeros
         // System.out.println("Suma dels primers 5 números: " + sumaPrimersNumeros(5));
@@ -63,4 +81,36 @@ public class Calculadora {
     }
 
 
-}
+
+
+    public static int moneda(int numero) {
+        int cares = 0;
+
+        Random rand = new Random();
+
+        for (int i = 0; i < numero ; i++) {
+            int resultat = rand.nextInt(2); 
+            if (resultat == 0) {
+                cares++;
+            }
+        }
+
+        return cares;
+
+        //System.out.println("Nombre de cares: " + cares);
+        //System.out.println("Nombre de creus: " + (numero - cares));
+    }
+    public static double cinema (double entrada, boolean dia, boolean carnetJove) {          
+                   
+            if (dia){
+                entrada = entrada + (entrada * 0.1);
+            }
+            if(carnetJove){
+                entrada = entrada - (entrada * 0.15);
+            }
+            return entrada;
+
+            }    
+    }
+
+
