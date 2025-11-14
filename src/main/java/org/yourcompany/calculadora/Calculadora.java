@@ -4,7 +4,7 @@ package org.yourcompany.calculadora;
 import java.util.Scanner;
 /**
  *
- * @author Posa el teu nom
+ * @author yazan issa 
  */
 
 
@@ -13,34 +13,18 @@ public class Calculadora {
     public static void main(String[] args) {
 
         mostrarMenu();
-/*         // Exemples de crida per al mètode nombreDigits
-        System.out.println("Nombre de dígits de 1234: " + nombreDigits(1234));
-        System.out.println("Nombre de dígits de 56789: " + nombreDigits(56789));
-        System.out.println("Nombre de dígits de -101010: " + nombreDigits(-101010));
-        System.out.println("Nombre de dígits de 0: " + nombreDigits(0));
+        }
 
-        // Exemples de crida per al mètode sumaPrimersNumeros
+    
+     /**
+     * Calcula el nombre de dígits d’un número enter.
+     * Funciona tant per a nombres positius com negatius.
+     * Si el nombre és 0, retorna 1.
+     *
+     * @param nombre Número del qual es vol saber el nombre de dígits
+     * @return Quantitat de dígits que té {@code nombre}
+     */
 
-        System.out.println("Suma dels primers 5 números: " + sumaPrimersNumeros(5));
-        System.out.println("Suma dels primers 10 números: " + sumaPrimersNumeros(10));
-         System.out.println("Suma dels primers 15 números: " + sumaPrimersNumeros(15));
-
-        // Exemples de crida per al mètode calcularFactorial
-         System.out.println("Factorial de 5: " + calcularFactorial(5));
-         System.out.println("Factorial de 7: " + calcularFactorial(7));
-         System.out.println("Factorial de 10: " + calcularFactorial(10));
-
-        // Exemples de crida per al mètode sumaQuadrats
-         System.out.println("Suma dels quadrats dels primers 3 números: " + sumaQuadrats(3));
-         System.out.println("Suma dels quadrats dels primers 5 números: " + sumaQuadrats(5));
-         System.out.println("Suma dels quadrats dels primers 7 números: " + sumaQuadrats(7));
-
-        // Exemples de crida per al mètode calcularPotencia
-         System.out.println("2 elevat a la potència 3: " + calcularPotencia(2, 3));
-         System.out.println("5 elevat a la potència 4: " + opcio = teclat.nextInt();calcularPotencia(5, 4));
-         System.out.println("3 elevat a la potència 5: " + calcularPotencia(3, 5));
- */
-    }
         // Comptar el nombre de dígits d'un nombre enter
     public static int nombreDigits(int nombre) {
         if (nombre == 0) {
@@ -54,36 +38,64 @@ public class Calculadora {
         return comptador;
     }
 
-    // Suma dels primers n números naturals 
-    public static int sumaPrimersNumeros(int n) {
+        /**
+        * Calcula la suma dels primers n números naturals.
+        *
+        * @param n1 Nombre fins on sumar (números naturals)
+        * @return La suma des de 1 fins a n1 inclòs
+        */
+    public static int sumaPrimersNumeros(int n1) {
         int suma = 0;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n1; i++) {
             suma += i;
         }
         return suma;
       
     }
 
-    // Calcula el factorial de un número n 
-    public static long calcularFactorial(int n) {
+
+
+        /**
+        * Calcula el factorial d'un número enter n.
+        * El factorial de n (n!) és el producte de tots els enters positius de 1 a n.
+        * Per convenció, el factorial de 0 és 1.
+        *
+        * @param n2 Número del qual es vol calcular el factorial
+        * @return El factorial de n2 com un valor long
+        */
+    public static long calcularFactorial(int n2) {
         long factorial = 1;
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i <= n2; i++) {
             factorial *= i;
         }
         return factorial;
     }
 
-    // Suma dels quadrats dels primers n números naturals 
-    public static int sumaQuadrats(int n) {
+        /**
+        * Calcula la suma dels quadrats dels primers n números naturals.
+        *
+        * @param n3 Nombre fins on sumar els quadrats (números naturals)
+        * @return La suma dels quadrats des de 1 fins a n3 inclòs
+        */
+    public static int sumaQuadrats(int n3) {
         int suma = 0;
-        for (int i = 1; i <= n; i++) {
+        for (int i = 1; i <= n3; i++) {
             suma += i * i;
         }
         return suma;
       
     }
 
-    // Calcula base elevat a l'exponent 
+
+
+
+        /**
+        * Calcula la potència d'una base elevada a un exponent.
+        *
+        * @param base La base de la potència
+        * @param exponent L'exponent al qual s'eleva la base
+        * @return El resultat de base elevat a l'exponent com un valor long
+        */
     public static long calcularPotencia(int base, int exponent) {
         long resultat = 1;
         for (int i = 1; i <= exponent; i++) {
